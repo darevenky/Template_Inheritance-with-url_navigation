@@ -1,0 +1,73 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+{% block title %}
+    <title>Template Inheritance</title>
+{% endblock %}
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/mdb.css' %}">
+
+</head>
+<body>
+    
+    <center>
+        <h1 style="color:blue;">Template Inheritance</h1>
+    </center>
+
+{% block body_block %}
+
+
+    <center>
+
+        <br><h2 class="bg-dark text-info">This is Parent Page</h2><br>
+
+        <p class="bg-info text-dark" style="text-align: justify;">
+            This document explains the language syntax of the Django template system. If you’re looking for a more 
+            technical perspective on how it works and how to extend it, see The Django template language: for Python
+            programmers. Django’s template language is designed to strike a balance between power and ease. It’s 
+            designed to feel comfortable to those used to working with HTML. If you have any exposure to other 
+            text-based template languages, such as Smarty or Jinja2, you should feel right at home with Django’s 
+            templates. This document explains the language syntax of the Django template system. If you’re looking for a more 
+            technical perspective on how it works and how to extend it, see The Django template language: for Python
+            programmers. Django’s template language is designed to strike a balance between power and ease. It’s 
+            designed to feel comfortable to those used to working with HTML. If you have any exposure to other 
+            text-based template languages, such as Smarty or Jinja2, you should feel right at home with Django’s 
+            templates.
+        </p>
+        <p class="bg-secondary text-dark container" style="text-align: justify;">
+            This document explains the language syntax of the Django template system. If you’re looking for a more 
+            technical perspective on how it works and how to extend it, see The Django template language: for Python
+            programmers. Django’s template language is designed to strike a balance between power and ease. It’s 
+            designed to feel comfortable to those used to working with HTML. If you have any exposure to other 
+            text-based template languages, such as Smarty or Jinja2, you should feel right at home with Django’s 
+            templates. This document explains the language syntax of the Django template system. If you’re looking for a more 
+            technical perspective on how it works and how to extend it, see The Django template language: for Python
+            programmers. Django’s template language is designed to strike a balance between power and ease. It’s 
+            designed to feel comfortable to those used to working with HTML. If you have any exposure to other 
+            text-based template languages, such as Smarty or Jinja2, you should feel right at home with Django’s 
+            templates.
+        </p>
+
+        <a href="{% url 'child' %}"  class="btn btn-primary">Go to Child</a>
+
+    </center>
+
+{% endblock %}
+
+
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <script src="{% static 'js/mdb.js' %}"></script>
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/popper.js' %}"></script>
+
+    
+    
+</body>
+</html>
